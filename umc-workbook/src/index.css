@@ -1,54 +1,12 @@
 body {
     background-color: #22254b;
   }
-  .component{
-    width: 170px;
-    margin: 7px;
-    background-color: #373b69;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    margin-top: 20px;
-    position: relative;
-  }
-  .movie_img {
-    width: 150px;
-    margin: 7px;
-    background-color: #373b69;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    margin-top: 20px;
-    position: relative;
-  }
-  .img {
-    width: 100%;
-  }
-  .movie_info {
-    margin-left: 15px;
-    margin-top:10px;
-    margin-bottom:15px;
-    color: #FFFFFF
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
 
-  }
-  .app-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
-  }
-  .hide_info{
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: #c7c7c7;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 13px;
-    height: 100%;
-    border-radius: 0 0 5px 5px;
-    background-color: rgba(0, 0, 0, 0.7);
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 
   

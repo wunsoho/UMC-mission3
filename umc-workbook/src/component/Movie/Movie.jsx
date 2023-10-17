@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import * as A from './Movie.style';
 
 const domain = "https://image.tmdb.org/t/p/w1280/";
 
@@ -17,19 +18,19 @@ function Movie({ title, vote_average, poster_path, overview }) {
   };
 
     return (
-      <div className="component" onMouseOver={MouseIn} onMouseOut={MouseOut}>
-        <div className="movie_img"> 
-          <img src={domain + poster_path} className="img" alt={title} />
-          <div className="movie_info">
+      <A.component onMouseOver={MouseIn} onMouseOut={MouseOut}>
+        <A.movie_img> 
+          <A.img src={domain + poster_path} alt={title} />
+          <A.movie_info>
             <b>{title}</b>
             <span>{vote_average}</span>
-          </div>
-          <div className="hide_info" style={tf ? t : f}>
+          </A.movie_info>
+        </A.movie_img>
+          <A.hide_info style={tf ? t : f}>
             <b>{title}</b>
             <span>{overview}</span>
-          </div>
-        </div>
-      </div>
+          </A.hide_info>
+      </A.component>
   );
 }
 
