@@ -9,20 +9,33 @@ import { movies } from "./movieDummy";
 
 function App() {
   return (
-      <div className="app-container">
-        {
-          movies.results.map((item) => {
-            return (
-              <Movie 
-              poster_path={item.poster_path}
-              title={item.title}
-              vote_average={item.vote_average}  
-              overview={item.overview}
-              />
-            )
-          })
-        }
-      </div>
+    <div className="root-wrap">
+      <BrowserRouter>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/movie" element={
+            <div className="app-container">
+                  {
+                    movies.results.map((item) => {
+                      return (
+                        <Movie 
+                        poster_path={item.poster_path}
+                        title={item.title}
+                        vote_average={item.vote_average}  
+                        overview={item.overview}
+                        />
+                      )
+                    })
+                  }
+            </div>
+          }/>
+          <Route to="/celebrity" element={<Celebirity/>}/>
+          <Route to="/tv" element={<TV/>}/>
+          <Route to="*" element={<NotFound/>}/>
+        </Routes> 
+      </BrowserRouter>
+    </div>
   );
 }
 

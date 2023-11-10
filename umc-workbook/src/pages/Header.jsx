@@ -7,7 +7,7 @@ export default function Header() {
       style={{
         backgroundColor: "#2a2e5d",
         display: "flex",
-        padding: "10vw",
+        width : "100vw"
       }}
     >
       <Link to="/">
