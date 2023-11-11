@@ -29,7 +29,7 @@ export default class LoginControl extends React.Component {
         return (
           <div style={{color: "white"}}>
             <p><button style={{ margin: "1vw", borderRadius: "20px", width:"5vw", height:"5vh" }}className={buttonClass} onClick={handleClick}>{buttonText}</button>
-            {isLoggedIn ? '환영합니다!' : '로그인 해주세요!'}.</p>
+            {isLoggedIn ? '환영합니다!' : '로그인 해주세요!'}</p>
           </div>
         );
     }
