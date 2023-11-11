@@ -33,8 +33,8 @@ function App() {
           }/>
           <Route to="/celebrity" element={<Celebirity/>}/>
           <Route to="/tv" element={<TV/>}/>
-          <Route to="*" element={<NotFound/>}/>
           <Route path={`/movie/:title`} element={<MovieDetail/>}/>
+          <Route path="/*" element={<NotFound/>}/>
         </Routes> 
       </BrowserRouter>
     </div>
