@@ -25,6 +25,7 @@ export default class LoginControl extends React.Component {
         const buttonClass = isLoggedIn ? "logout-btn" : "login-btn";
         const buttonText = isLoggedIn ? "로그아웃" : "로그인";
         const handleClick = isLoggedIn ? this.handleLogoutClick : this.handleLoginClick;
+        
     
         return (
           <div style={{color: "white"}}>

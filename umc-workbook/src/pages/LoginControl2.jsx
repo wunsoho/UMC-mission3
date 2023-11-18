@@ -1,10 +1,17 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginControl() {
   const [isLoggedIn, setisLoggedIn] = useState(false);
 
+  const navigate = useNavigate();
   const handleLogin = () => {
     setisLoggedIn(!isLoggedIn);
+    navigate(`/login`, {
+      state: {
+        state: {isLoggedIn}
+      }
+    })
   };
 
   return (
